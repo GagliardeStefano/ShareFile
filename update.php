@@ -32,42 +32,44 @@
 
                 foreach($ris as $arrayUtenti){
                     $risultato = $risultato.$arrayUtenti['mail'];
-                }
 
-                if($mail == $arrayUtenti['mail']){
+                    if($mail == $arrayUtenti['mail']){
 
-                    if($pass == null && $checkPass == null){
-                        $flagPassNull = 1;
-
-                    }else{
-
-                        if($mail == null && $checkMail == null){
-                            $flagMailNull = 1;
+                        if($pass == null && $checkPass == null){
+                            $flagPassNull = 1;
+    
                         }else{
-                            if($mail == $checkMail && $pass == $checkPass){
-                        
-                                $update = ("UPDATE utenti SET passwd='$pass' WHERE mail='$mail'");
-                                $res = $mysql -> query($update);
-                                
-                                header("location: login.php");
-                            
-                            }elseif($mail != $checkMail && $pass == $checkPass){
-                                $flagEmail = 1;
-                                
-                            }elseif($mail == $checkMail && $pass != $checkPass){
-        
-                                $flagPass = 1;
-                            }elseif($mail != $checkMail && $pass != $checkPass){
-        
-                                $flagAll = 1;
+    
+                            if($mail == null && $checkMail == null){
+                                $flagMailNull = 1;
                             }else{
-                                $flagControllo = 1;
-                            }
-                        } 
+                                if($mail == $checkMail && $pass == $checkPass){
+                            
+                                    $update = ("UPDATE utenti SET passwd='$pass' WHERE mail='$mail'");
+                                    $res = $mysql -> query($update);
+                                    
+                                    header("location: login.php");
+                                
+                                }elseif($mail != $checkMail && $pass == $checkPass){
+                                    $flagEmail = 1;
+                                    
+                                }elseif($mail == $checkMail && $pass != $checkPass){
+            
+                                    $flagPass = 1;
+                                }elseif($mail != $checkMail && $pass != $checkPass){
+            
+                                    $flagAll = 1;
+                                }else{
+                                    $flagControllo = 1;
+                                }
+                            } 
+                        }
+                    }else{
+                        $flagControllo = 1;
                     }
-                }else{
-                    $flagControllo = 1;
                 }
+
+                
             }
         ?>
             
