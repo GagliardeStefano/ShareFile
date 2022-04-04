@@ -1,0 +1,141 @@
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    float: right;
+    display: inline-block;
+    margin-top: -10rem;
+    margin-right: 10rem;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  
+  .show {display:block;}
+
+
+  .buttonAccount{
+      background-color: white;
+      border: none;
+  }
+
+
+
+
+  /* Upload file */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection{
+  color: #fff;
+  background: #6990F2;
+}
+.wrapper{
+  text-align: center;
+  width: 430px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  color: #6990F2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 300px;
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
+}
+
+.wrapper p{
+  font-size: 33px;
+  color: #6990f2;
+  font-family: monospace;
+}
+.wrapper label{
+  font-size: 18px;
+  color: #6990f2;
+  font-family: monospace;
+}
+
+.wrapper select{
+  border: 2px solid grey;
+  border-radius: 23px;
+  padding: 5px;
+  font-family: monospace;
+}
+
+.wrapper select option{
+  font-size: 14px;
+  font-family: monospace;
+}
+
+
+.wrapper input[type = "submit"]:hover, [type = "reset"]:hover{
+  background-color: rgb(79, 232, 240);
+}
+
+
+.icon{
+ font-size: 60px; 
+}
+
+.label {
+  background-color: rgb(2, 230, 255);
+  color: white !important; 
+  padding: 5px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+  font-size: 16px
+}
+
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+  font-size: 16px !important;
+}

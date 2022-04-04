@@ -1,0 +1,52 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 0%;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.paragrafo{
+    font-size: 23px;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.button{
+    padding: 9px;
+    background-color: #70ff6e;
+    width: 9rem;
+    border-radius: 33px;
+    border: solid 3px;
+    cursor: pointer;
+    margin-left: 46%;
+    margin-top: -4rem;
+}
+
+
+.img{
+    width: 2rem;
+}
+
+.scelta{
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+    border: solid 2px black;
+    background-color: #67ffea;
+}
+
+.titoloTable{
+    display: table-row-group;
+    font-size: 24px;
+}
