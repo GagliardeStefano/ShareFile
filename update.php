@@ -44,8 +44,11 @@
                                 $flagMailNull = 1;
                             }else{
                                 if($mail == $checkMail && $pass == $checkPass){
+                                    
+                                    $passCriptUpdate = md5($pass);
+                                    $_SESSION['criptPS'] = $passCriptUpdate;
                             
-                                    $update = ("UPDATE utenti SET passwd='$pass' WHERE mail='$mail'");
+                                    $update = ("UPDATE utenti SET passwd='$passCriptUpdate' WHERE mail='$mail'");
                                     $res = $mysql -> query($update);
                                     
                                     header("location: login.php");

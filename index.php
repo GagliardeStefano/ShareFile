@@ -44,8 +44,10 @@
                     $flagUtente = 1;
 
                 }else{
+                    $criptPassReg = md5($passwd);
+                    $_SESSION['criptPS'] = $criptPassReg;
 
-                    $queryInsert = ("INSERT INTO utenti VALUES ('$nome','$mail','$passwd')");
+                    $queryInsert = ("INSERT INTO utenti VALUES ('$nome','$mail','$criptPassReg')");
 
                     $resInsert = $mysql -> query($queryInsert);
 

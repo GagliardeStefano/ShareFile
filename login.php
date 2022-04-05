@@ -27,6 +27,8 @@
     
                 $mail = $_POST['email'];
                 $passwd = $_POST['passwd'];
+
+                $criptPassLog = md5($passwd);
     
                 $query = ("SELECT * FROM utenti WHERE mail = '".$mail."'");
     
@@ -41,7 +43,7 @@
                         $risultato = $risultato.$array['mail'].$array['passwd'];
                     }
     
-                    if($mail == $array['mail'] && $passwd == $array['passwd']){
+                    if($mail == $array['mail'] && $criptPassLog == $array['passwd']){
                     
                         $_SESSION['emailS'] = $mail;   
                         header("location: home.php");
