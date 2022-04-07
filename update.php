@@ -64,7 +64,7 @@
                                     $flagControllo = 1;
                                 }
                             }else{
-                                $flagMailNull = 1;
+                               $flagMailNull = 1;
                             } 
                         }
                     }else{

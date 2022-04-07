@@ -36,24 +36,23 @@
     
                 $risultato = "";
     
-                if($res -> num_rows > 0){
-    
-                    foreach($res as $array){
+          
+                foreach($res as $array){
                         
-                        $risultato = $risultato.$array['mail'].$array['passwd']; 
+                    $risultato = $risultato.$array['mail'].$array['passwd']; 
                         
-                        if($mail == $array['mail'] && $criptPassLog == $array['passwd']){
+                    if($mail == $array['mail'] && $criptPassLog == $array['passwd']){
                     
-                            $_SESSION['emailS'] = $mail;   
-                            header("location: home.php");
+                        $_SESSION['emailS'] = $mail;   
+                        header("location: home.php");
                         
-                        }else{                    
-                            $flagError = 1;
-                        }
+                    }else{                    
+                        $flagError = 1;
                     }
+                }
     
                    
-                }
+                
             }else{
                 //   
             }
