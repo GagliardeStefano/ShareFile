@@ -30,7 +30,7 @@
 
                 $criptPassLog = md5($passwd);
     
-                $query = ("SELECT * FROM utenti WHERE mail = '".$mail."'");
+                $query = ("SELECT * FROM utenti WHERE mail = '$mail'");
     
                 $res = $mysql -> query($query);
     
@@ -40,17 +40,19 @@
     
                     foreach($res as $array){
                         
-                        $risultato = $risultato.$array['mail'].$array['passwd'];
+                        $risultato = $risultato.$array['mail'].$array['passwd']; 
+                        
+                        if($mail == $array['mail'] && $criptPassLog == $array['passwd']){
+                    
+                            $_SESSION['emailS'] = $mail;   
+                            header("location: home.php");
+                        
+                        }else{                    
+                            $flagError = 1;
+                        }
                     }
     
-                    if($mail == $array['mail'] && $criptPassLog == $array['passwd']){
-                    
-                        $_SESSION['emailS'] = $mail;   
-                        header("location: home.php");
-                        
-                    }else{                    
-                        $flagError = 1;
-                    }
+                   
                 }
             }else{
                 //   

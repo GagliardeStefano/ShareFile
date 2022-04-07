@@ -26,7 +26,7 @@
                     exit();
                 }
 
-                $select = ("SELECT mail FROM utenti");
+                $select = ("SELECT mail FROM utenti WHERE mail='$mail'");
                 $ris = $mysql -> query($select);
                 $risultato = "";
 
@@ -40,9 +40,7 @@
     
                         }else{
     
-                            if($mail == null && $checkMail == null){
-                                $flagMailNull = 1;
-                            }else{
+                            if(isset($mail, $checkMail)){
                                 if($mail == $checkMail && $pass == $checkPass){
                                     
                                     $passCriptUpdate = md5($pass);
@@ -65,6 +63,8 @@
                                 }else{
                                     $flagControllo = 1;
                                 }
+                            }else{
+                                $flagMailNull = 1;
                             } 
                         }
                     }else{
