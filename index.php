@@ -27,7 +27,7 @@
             $mail = $_POST['email'];
             $passwd = $_POST['passwd'];
 
-            if(isset($nome, $mail, $passwd)){
+            if($nome != null && $mail != null && $passwd != null){
 
                 $query = ("SELECT mail FROM utenti WHERE mail = '$mail' ");
                 $res = $mysqli->query($query);
